@@ -13,10 +13,9 @@
 
 
 /* ---- BRAND TOKENS ----
-   --gold / --gold-light / --gold-pale are the Mesko brand reds.
-   The legacy "gold-" names are kept so existing HTML keeps working;
-   --brand / --brand-light / --brand-pale are semantic aliases you
-   can use in new markup.
+   --brand / --brand-light / --brand-pale are the Mesko brand colors.
+   To rebrand (or to fork this theme for a client), change these three
+   values — every component below pulls from them.
 */
 :root {
   --bg: #f4f4f4;
@@ -24,14 +23,10 @@
   --surface2: #eeeeee;
   --ink: #0a0a0a;
   --ink-light: #6b6b6b;
-  --gold: #a0142a;
-  --gold-light: #c0182e;
-  --gold-pale: #fae8ec;
-  --brand: var(--gold);
-  --brand-light: var(--gold-light);
-  --brand-pale: var(--gold-pale);
+  --brand: #a0142a;
+  --brand-light: #c0182e;
+  --brand-pale: #fae8ec;
   --border: #d8d8d8;
-  --red: #a0142a;
   --green: #1a6b3a;
   --orange: #e07b39;
   --font-display: 'Cormorant Garamond', serif;
@@ -70,8 +65,8 @@ body {
 
 .hero-badge {
   display: inline-block;
-  border: 1px solid var(--gold);
-  color: var(--gold);
+  border: 1px solid var(--brand);
+  color: var(--brand);
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.25em;
@@ -91,7 +86,7 @@ body {
 
 .hero h1 em {
   font-style: italic;
-  color: var(--gold-light);
+  color: var(--brand-light);
 }
 
 .hero-sub {
@@ -106,7 +101,7 @@ body {
 .hero-rule {
   width: 60px;
   height: 2px;
-  background: var(--gold);
+  background: var(--brand);
   margin: 28px 0;
 }
 
@@ -120,7 +115,7 @@ body {
   font-family: var(--font-display);
   font-size: 28px;
   font-weight: 600;
-  color: var(--gold-light);
+  color: var(--brand-light);
 }
 
 .hero-stat .lbl {
@@ -158,8 +153,8 @@ body {
   letter-spacing: 0.02em;
 }
 
-.tab:hover { color: var(--gold); }
-.tab.active { color: var(--gold); border-bottom-color: var(--gold); font-weight: 600; }
+.tab:hover { color: var(--brand); }
+.tab.active { color: var(--brand); border-bottom-color: var(--brand); font-weight: 600; }
 
 
 /* ---- MAIN CONTENT ---- */
@@ -180,7 +175,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--brand);
   margin-bottom: 6px;
 }
 
@@ -205,7 +200,7 @@ body {
 .script-block {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--gold);
+  border-left: 4px solid var(--brand);
   padding: 28px 32px;
   margin-bottom: 20px;
   border-radius: 0 6px 6px 0;
@@ -227,7 +222,7 @@ body {
   margin-bottom: 10px;
 }
 
-.script-block-label.gold   { color: var(--gold); }
+.script-block-label.brand  { color: var(--brand); }
 .script-block-label.orange { color: var(--orange); }
 .script-block-label.green  { color: var(--green); }
 
@@ -237,13 +232,13 @@ body {
   color: var(--ink);
 }
 
-.script-text strong { color: var(--gold); font-weight: 600; }
+.script-text strong { color: var(--brand); font-weight: 600; }
 
 .fill-blank {
   display: inline-block;
-  border-bottom: 2px dotted var(--gold);
+  border-bottom: 2px dotted var(--brand);
   min-width: 120px;
-  color: var(--gold);
+  color: var(--brand);
   font-style: italic;
   padding: 0 4px;
 }
@@ -278,15 +273,15 @@ body {
   transition: all 0.2s;
 }
 
-.btn-gold { background: var(--gold); color: #ffffff; }
-.btn-gold:hover { background: var(--gold-light); }
+.btn-brand { background: var(--brand); color: #ffffff; }
+.btn-brand:hover { background: var(--brand-light); }
 
 .btn-outline {
   background: none;
   border: 1.5px solid var(--border);
   color: var(--ink-light);
 }
-.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-outline:hover { border-color: var(--brand); color: var(--brand); }
 
 .progress-bar {
   display: flex;
@@ -302,7 +297,7 @@ body {
   transition: background 0.3s;
 }
 
-.progress-dot.done { background: var(--gold); }
+.progress-dot.done { background: var(--brand); }
 
 
 /* ---- PRODUCT CARDS ---- */
@@ -326,13 +321,13 @@ body {
 }
 
 .product-card:hover {
-  border-color: var(--gold);
+  border-color: var(--brand);
   box-shadow: 0 4px 20px rgba(184,134,11,0.1);
 }
 
 .product-card.selected {
-  border-color: var(--gold);
-  background: var(--gold-pale);
+  border-color: var(--brand);
+  background: var(--brand-pale);
 }
 
 .product-card .selected-badge {
@@ -340,7 +335,7 @@ body {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: var(--gold);
+  background: var(--brand);
   color: #ffffff;
   font-size: 10px;
   font-weight: 700;
@@ -366,7 +361,7 @@ body {
 .product-price {
   font-size: 22px;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--brand);
   margin-bottom: 8px;
 }
 
@@ -415,15 +410,15 @@ body {
 .pricing-row:nth-child(even) { background: #fdfcf9; }
 
 .pricing-row .name     { font-weight: 500; }
-.pricing-row .price    { font-weight: 600; color: var(--gold); text-align: right; white-space: nowrap; }
+.pricing-row .price    { font-weight: 600; color: var(--brand); text-align: right; white-space: nowrap; }
 .pricing-row .revision { text-align: right; color: var(--ink-light); font-size: 13px; white-space: nowrap; }
 .pricing-row .use      { color: var(--ink-light); font-size: 12px; }
 
 
 /* ---- TOTAL BAR ---- */
 .total-bar {
-  background: var(--gold-pale);
-  border: 1px solid var(--gold);
+  background: var(--brand-pale);
+  border: 1px solid var(--brand);
   padding: 20px 24px;
   display: flex;
   justify-content: space-between;
@@ -443,7 +438,7 @@ body {
   font-family: var(--font-display);
   font-size: 32px;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--brand);
 }
 
 
@@ -475,7 +470,7 @@ body {
 .obj-q::after {
   content: '+';
   font-size: 20px;
-  color: var(--gold);
+  color: var(--brand);
   flex-shrink: 0;
   transition: transform 0.2s;
 }
@@ -500,9 +495,9 @@ body {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--brand);
   margin-bottom: 12px;
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--brand);
   padding-left: 10px;
 }
 
@@ -520,8 +515,8 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
-.filter-btn:hover { border-color: var(--gold); color: var(--gold); }
-.filter-btn.active { background: var(--gold); border-color: var(--gold); color: #ffffff; font-weight: 600; }
+.filter-btn:hover { border-color: var(--brand); color: var(--brand); }
+.filter-btn.active { background: var(--brand); border-color: var(--brand); color: #ffffff; font-weight: 600; }
 
 
 /* ---- UTILITIES ---- */
@@ -532,8 +527,8 @@ body {
 }
 
 .callout {
-  background: var(--gold-pale);
-  border-left: 4px solid var(--gold);
+  background: var(--brand-pale);
+  border-left: 4px solid var(--brand);
   padding: 16px 20px;
   font-size: 14px;
   line-height: 1.65;
